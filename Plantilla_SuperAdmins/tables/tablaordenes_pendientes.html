@@ -164,7 +164,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="tablaordenes_pendientes.html">
+                      <a href="tablaordenes-pendientes.html">
                         <span class="sub-item">Productos pendientes</span>
                       </a>
                     </li>
@@ -566,128 +566,221 @@
           <!-- End Navbar -->
         </div>
 
+
+
+
+
+
+
+
         <div class="container">
           <div class="page-inner">
+
             <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-2">
-              <h3 class="fw-bold mb-3">Ordenes de Reposición</h3>
+              <h3 class="fw-bold mb-3">Ordenes de Reposición Pendientes</h3>
             </div>
+
             <div class="row">
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-body">
                     <div class="table-responsive">
-                      <table id="basic-datatables" class="display table table-striped table-hover">
+                      <table
+                        id="add-row"
+                        class="display table table-striped table-hover"
+                      >
                         <thead>
                           <tr>
-                            <th>Código</th>
                             <th>Producto</th>
                             <th>Cantidad</th>
                             <th>Zona</th>
-                            <th>Fecha de solicitud</th>
-                            <th>Fecha de llegada</th>
-                            <th>Estado</th>
-                            <th></th>
+                            <th>Fecha de pedido</th>
+                            <th style="width: 10%">Acción</th>
                           </tr>
                         </thead>
+                
                         <tbody>
                           <tr>
-                            <td>7684ZK</td>
-                            <td>Xiaomi Mi 5G</td>
+                            <td>Xiaomi Mi 11 5G</td>
                             <td>12</td>
-                            <td>Norte</td>
-                            <td>2024-06/15 11:42:19</td>
-                            <td>2024-08/15 13:00:00</td>
-                            <td>En proceso</td>
+                            <td>Este</td>
+                            <td>2024-07-08 18:05:52</td>
+                            <td>
+                              <div class="form-button-action">
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-primary btn-lg"
+                                  data-original-title="Edit Task"
+                                >
+                                  <i class="fa fa-edit"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-danger"
+                                  data-original-title="Remove"
+                                >
+                                  <i class="fa fa-times"></i>
+                                </button>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
-                            <td>7684AS</td>
+                            <td>Samsung Galaxy S24</td>
+                            <td>24</td>
+                            <td>Oeste</td>
+                            <td>2024-08-01 09:15:37</td>
+                            <td>
+                              <div class="form-button-action">
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-primary btn-lg"
+                                  data-original-title="Edit Task"
+                                >
+                                  <i class="fa fa-edit"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-danger"
+                                  data-original-title="Remove"
+                                >
+                                  <i class="fa fa-times"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
                             <td>Sony PS5</td>
                             <td>15</td>
-                            <td>Sur</td>
-                            <td>2024-05/15 11:42:19</td>
-                            <td>2024-08/20 15:00:00</td>
-                            <td>Recibido</td>
+                            <td>Norte</td>
+                            <td>2024-06-15 11:42:19</td>
+                            <td>
+                              <div class="form-button-action">
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-primary btn-lg"
+                                  data-original-title="Edit Task"
+                                >
+                                  <i class="fa fa-edit"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-danger"
+                                  data-original-title="Remove"
+                                >
+                                  <i class="fa fa-times"></i>
+                                </button>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
-                            <td>32AFAF</td>
+                            <td>DJI Mavic Air</td>
+                            <td>9</td>
+                            <td>Sur</td>
+                            <td>2024-09-02 07:22:44</td>
+                            <td>
+                              <div class="form-button-action">
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-primary btn-lg"
+                                  data-original-title="Edit Task"
+                                >
+                                  <i class="fa fa-edit"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-danger"
+                                  data-original-title="Remove"
+                                >
+                                  <i class="fa fa-times"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        
+                          <tr>
                             <td>LG OLED TV</td>
                             <td>30</td>
-                            <td>Este</td>
-                            <td>2024-04/15 11:42:19</td>
-                            <td>2024-09/20 10:00:00</td>
-                            <td>En aduanas</td>
+                            <td>Sur</td>
+                            <td>2024-07-28 15:05:10</td>
+                            <td>
+                              <div class="form-button-action">
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-primary btn-lg"
+                                  data-original-title="Edit Task"
+                                >
+                                  <i class="fa fa-edit"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-danger"
+                                  data-original-title="Remove"
+                                >
+                                  <i class="fa fa-times"></i>
+                                </button>
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
-                      
-                      <script>
-                        // Función para cerrar popups
-                        function cerrarPopup(id) {
-                          document.getElementById(id).style.display = 'none';
-                        }
-                      
-                        // Función para manejar la lógica del botón "Ver"
-                        function verRegistro(dni) {
-                          window.location.href = 'detalles_orden.html'; // Redirigir a detalles_orden.html
-                        }
-                      
-                        // Generar dinámicamente el botón de "Ver" con una imagen
-                        document.addEventListener('DOMContentLoaded', function() {
-                          document.querySelectorAll('#basic-datatables tbody tr').forEach(tr => {
-                            const dni = tr.cells[2].textContent; // Obtener el DNI del usuario desde la tercera celda
-                            const accionesTd = document.createElement('td'); // Crear la celda para "Acciones"
-                            // Asegúrate de que el texto y los elementos dentro del td estén centrados
-                            accionesTd.style.textAlign = 'center'; // Centra horizontalmente
-                            accionesTd.style.verticalAlign = 'middle'; // Centra verticalmente
-                            accionesTd.innerHTML = `
-                            <img src="/imagenes/buscador.png" alt="Ver" style="cursor:pointer; width: 20px; height: 20px;" onclick="verRegistro('${dni}')">
-                          `;                    
-                            tr.appendChild(accionesTd); // Añadir la celda de "Acciones" a la fila
-                          });
-                        });
-                      </script>
-                      
-                      
                     </div>
-         
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
+          <footer class="footer">
+            <div class="container-fluid d-flex justify-content-between">
+              <nav class="pull-left">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://www.themekita.com">
+                      ThemeKita
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Help </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Licenses </a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="copyright">
+                2024, made with <i class="fa fa-heart heart text-danger"></i> by
+                <a href="http://www.themekita.com">ThemeKita</a>
+              </div>
+              <div>
+                Distributed by
+                <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
+              </div>
+            </div>
+          </footer>
         </div>
 
+
+
         
-      
-        <footer class="footer">
-          <div class="container-fluid d-flex justify-content-between">
-            <nav class="pull-left">
-              <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="http://www.themekita.com">
-                    ThemeKita
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> Help </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> Licenses </a>
-                </li>
-              </ul>
-            </nav>
-            <div class="copyright">
-              2024, made with <i class="fa fa-heart heart text-danger"></i> by
-              <a href="http://www.themekita.com">ThemeKita</a>
-            </div>
-            <div>
-              Distributed by
-              <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
-            </div>
-          </div>
-        </footer>
-      </div>
 
       <!-- Custom template | don't include it in your project! -->
       <div class="custom-template">
