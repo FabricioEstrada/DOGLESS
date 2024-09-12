@@ -40,6 +40,79 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="../assets/css/demo.css" />
+
+    <!-- Estilo del timeline -->
+    <style>
+      div.timeline::before {
+          content: none; /* Elimina el contenido del pseudo-elemento */
+      }
+      .timeline {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+      }
+      .step {
+        text-align: center;
+        position: relative;
+      }
+      .step-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #ccc;
+        background-color: #f1f1f1;
+      }
+      /* Estilos adicionales */
+      .step-circle.grayed-out {
+        background-color: #e0e0e0; /* Fondo gris para el círculo */
+        border: 2px solid #ccc; /* Borde gris claro */
+      }
+      .grayed-out .step-title,
+      .grayed-out .step-date {
+        color: rgb(122, 122, 122); /* Aplica color gris al texto */
+      }
+
+      .grayed-out img {
+        filter: grayscale(100%); /* Aplica efecto gris a la imagen */
+      }
+
+      .step img {
+        width: 100%; /* Asegura que la imagen ocupe el 100% del círculo */
+        height: 100%; /* Asegura que la imagen ocupe todo el contenedor circular */
+        object-fit: cover; /* Cubre todo el círculo sin deformar la imagen */
+        border-radius: 50%; /* Mantiene la forma circular */
+      }
+      .step-title {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      .step-date {
+        font-size: 12px;
+        color: #999;
+      }
+      /* Línea que conecta los círculos */
+      .step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        width: 80px;
+        height: 2px;
+        background-color: #ccc;
+        transform: translateY(-50%);
+      }
+      .dataTables_info,
+      .dataTables_paginate,
+      .dataTables_length,
+.dataTables_filter {
+    display: none; /* Oculta los elementos de paginación y filtrado */
+}
+    </style>
+
   </head>
   <body>
     <div class="wrapper">
@@ -166,11 +239,6 @@
                     <li>
                       <a href="tablaordenes_pendientes.html">
                         <span class="sub-item">Productos pendientes</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="datatables.html">
-                        <span class="sub-item">Productos aprobados</span>
                       </a>
                     </li>
                   </ul>
@@ -575,15 +643,136 @@
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-body">
-                    <h3 class="fw-bold mb-3">Estado de orden: Recibido</h3>
+
                     
+                    <div class="card">
+                      <div class="card-body">
+                        <h3 class="fw-bold mb-3">Estado de orden: Recibido</h3>
+        
+                          <!-- Aquí comienza el timeline -->
+                            <div class="container">
+                              <div class="timeline">
+                                <!-- Creado (verdadero) -->
+                                <div class="step">
+                                  <div class="step-circle">
+                                    <img src="/imagenes/creado.png" alt="Creado">
+                                  </div>
+                                  <div class="step-title">Creado</div>
+                                  <div class="step-date">2024-06-15 11:42:19</div>
+                                </div>
+
+                                <!-- En validación (verdadero) -->
+                                <div class="step">
+                                  <div class="step-circle">
+                                    <img src="/imagenes/en_validacion.png" alt="En validación">
+                                  </div>
+                                  <div class="step-title">En validación</div>
+                                  <div class="step-date">2024-06-15 11:43:19</div>
+                                </div>
+
+                                <!-- En proceso (verdadero) -->
+                                <div class="step">
+                                  <div class="step-circle">
+                                    <img src="/imagenes/en_proceso.png" alt="En proceso">
+                                  </div>
+                                  <div class="step-title">En proceso</div>
+                                  <div class="step-date">2024-06-15 11:44:19</div>
+                                </div>
+
+                                <!-- Arribo al país (verdadero) -->
+                                <div class="step">
+                                  <div class="step-circle">
+                                    <img src="/imagenes/arribo_al_pais.png" alt="Arribo al país">
+                                  </div>
+                                  <div class="step-title">Arribo al país</div>
+                                  <div class="step-date">2024-06-19 18:42:19</div>
+                                </div>
+
+                                <!-- En aduanas (falso, grisado) -->
+                                <div class="step grayed-out">
+                                  <div class="step-circle">
+                                    <img src="/imagenes/en_aduanas.png" alt="En aduanas">
+                                  </div>
+                                  <div class="step-title">En aduanas</div>
+                                  <div class="step-date">2024-06-20 11:41:19</div>
+                                </div>
+
+                                <!-- En ruta (falso, grisado) -->
+                                <div class="step grayed-out">
+                                  <div class="step-circle">
+                                    <img src="/imagenes/en_ruta.png" alt="En ruta">
+                                  </div>
+                                  <div class="step-title">En ruta</div>
+                                  <div class="step-date">2024-06-21 11:42:19</div>
+                                </div>
+
+                                <!-- Recibido (falso, grisado) -->
+                                <div class="step grayed-out">
+                                  <div class="step-circle">
+                                    <img src="/imagenes/recibido.png" alt="Recibido">
+                                  </div>
+                                  <div class="step-title">Recibido</div>
+                                  <div class="step-date">2024-06-22 11:40:00</div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Aquí termina el timeline -->
+                      
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <h3 class="fw-bold">Detalles de orden:</h3>
+                            <div class="table-responsive">
+                              <table id="basic-datatables" class="display table table-striped table-hover">
+                                <thead>
+                                  <tr>
+                                    <th>Código</th>
+                                    <th>Producto</th>
+                                    <th>Zona</th>
+                                    <th>Precio de unidad (S/.)</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio Total (S/.)</th>
+                                    <th>Estado</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>7684ZK</td>
+                                    <td>Xiaomi Mi 5G</td>
+                                    <td>Este</td>
+                                    <td>1600</td>
+                                    <td>12</td>
+                                    <td>19200</td>
+                                    <td>Arribo al pais</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                 
+                          </div>
+                        </div>
+                      </div>
+        
+                    </div>
+                    
+                    <div class="container">
+                      <!-- Contenedor con alineación de flexbox -->
+                      <div class="d-flex justify-content-end">
+                          <button type="button" class="btn btn-primary" onclick="goToRoute()">Regresar</button>
+                      </div>
+                  </div>
+
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
+        
 
         
       
@@ -825,6 +1014,10 @@
     <!-- Kaiadmin DEMO methods, don't include it in your project! -->
     <script src="../assets/js/setting-demo2.js"></script>
     <script>
+      function goToRoute() {
+          window.location.href = 'tablaordenes.html';
+        }
+
       $(document).ready(function () {
         $("#basic-datatables").DataTable({});
 

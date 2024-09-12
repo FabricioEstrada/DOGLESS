@@ -26,6 +26,7 @@
       align-items: center;
       border: 2px solid #ccc;
       background-color: #f1f1f1;
+      overflow: hidden; /* Para recortar la imagen fuera del círculo */
     }
     .grayed-out {
       background-color: #dcdcdc !important;
@@ -33,7 +34,10 @@
       color: #999;
     }
     .step img {
-      width: 40px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Hace que la imagen cubra el área sin distorsión */
+      border-radius: 50%; /* Para mantener la imagen dentro del círculo */
     }
     .step-title {
       margin-top: 10px;
@@ -63,7 +67,7 @@
     <!-- Creado (verdadero) -->
     <div class="step">
       <div class="step-circle">
-        <img src="/imagenes/" alt="Creado">
+        <img src="/imagenes/creado.png" alt="Creado">
       </div>
       <div class="step-title">Creado</div>
       <div class="step-date">2024-06-15 11:42:19</div>
@@ -72,7 +76,7 @@
     <!-- En validación (falso, grisado) -->
     <div class="step">
       <div class="step-circle grayed-out">
-        <img src="https://via.placeholder.com/40" alt="En validación">
+        <img src="/imagenes/en_validacion.png" alt="En validación">
       </div>
       <div class="step-title">En validación</div>
       <div class="step-date">2024-06-15 11:43:19</div>
@@ -81,7 +85,7 @@
     <!-- En proceso (falso, grisado) -->
     <div class="step">
       <div class="step-circle grayed-out">
-        <img src="https://via.placeholder.com/40" alt="En proceso">
+        <img src="/imagenes/en_proceso.png" alt="En proceso">
       </div>
       <div class="step-title">En proceso</div>
       <div class="step-date">2024-06-15 11:44:19</div>
@@ -90,7 +94,7 @@
     <!-- Arribo al país (verdadero) -->
     <div class="step">
       <div class="step-circle">
-        <img src="https://via.placeholder.com/40" alt="Arribo al país">
+        <img src="/imagenes/arribo_al_pais.png" alt="Arribo al país">
       </div>
       <div class="step-title">Arribo al país</div>
       <div class="step-date">2024-06-19 18:42:19</div>
@@ -99,7 +103,7 @@
     <!-- En aduanas (falso, grisado) -->
     <div class="step">
       <div class="step-circle grayed-out">
-        <img src="https://via.placeholder.com/40" alt="En aduanas">
+        <img src="/imagenes/en_aduanas.png" alt="En aduanas">
       </div>
       <div class="step-title">En aduanas</div>
       <div class="step-date">2024-06-20 11:41:19</div>
@@ -108,7 +112,7 @@
     <!-- En ruta (falso, grisado) -->
     <div class="step">
       <div class="step-circle grayed-out">
-        <img src="https://via.placeholder.com/40" alt="En ruta">
+        <img src="/imagenes/en_ruta.png" alt="En ruta">
       </div>
       <div class="step-title">En ruta</div>
       <div class="step-date">2024-06-21 11:42:19</div>
@@ -117,7 +121,7 @@
     <!-- Recibido (falso, grisado) -->
     <div class="step">
       <div class="step-circle grayed-out">
-        <img src="https://via.placeholder.com/40" alt="Recibido">
+        <img src="/imagenes/recibido.png" alt="Recibido">
       </div>
       <div class="step-title">Recibido</div>
       <div class="step-date">2024-06-22 11:40:00</div>
